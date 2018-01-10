@@ -22,3 +22,4 @@
 
 ## Refactor TODOS
 - Refactor user association test in post_spec
+- Refactor posts_form for admin user with status
