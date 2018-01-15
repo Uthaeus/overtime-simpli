@@ -6,6 +6,7 @@
 - x Post -> date:date rationale:text
 - x User -> Devise
 - x AdminUser -> STI
+- Auditing
 
 ## Features
 - Approval Workflow
@@ -17,11 +18,11 @@
 
 ## UI
 - x Bootstrap -> formatting
-- Icons from Font Awesome
+- x Icons from glyphicons
 - x Update styles for Forms
 
 ## Refactor TODOS
 - x Refactor user association test in post_spec
-- Refactor posts_form for admin user with status
+- x Refactor posts_form for admin user with status
 - x Fix post_spec.rb:82 to use factories
 - x Fix post_spec.rb:52 to have correct user reference and not require update
