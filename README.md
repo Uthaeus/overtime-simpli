@@ -15,6 +15,7 @@
 - Email summary to managers for approval
 - Needs to be documented if employee did not log overtime
 - x Block non admin and guest users
+- Create audit log for each text message
 
 ## UI
 - x Bootstrap -> formatting
