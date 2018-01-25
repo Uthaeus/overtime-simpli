@@ -26,6 +26,7 @@
 - Fix admin dashboard bug
 - Implement Honeybadger for error reporting
 - Implement new relic for keeping the site alive
+- Check on data issue and verify correct hours are being tracked
 
 ## UI
 - x Bootstrap -> formatting
