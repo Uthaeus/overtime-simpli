@@ -17,6 +17,15 @@
 - x Block non admin and guest users
 - Create audit log for each text message
 - Need to update end_date when confirmed
+- Need to oupdate audit log status when an overtime is rejected
+- Home icon
+- Update buttons on employee homepage so they show on mobile
+- Update buttons to include timespan
+- Update button sort order on employee homepage
+- Remove unnecessary buttons from admin nav bars
+- Fix admin dashboard bug
+- Implement Honeybadger for error reporting
+- Implement new relic for keeping the site alive
 
 ## UI
 - x Bootstrap -> formatting
