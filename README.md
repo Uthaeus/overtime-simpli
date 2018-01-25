@@ -16,6 +16,7 @@
 - Needs to be documented if employee did not log overtime
 - x Block non admin and guest users
 - Create audit log for each text message
+- Need to update end_date when confirmed
 
 ## UI
 - x Bootstrap -> formatting
