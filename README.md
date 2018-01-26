@@ -6,27 +6,27 @@
 - x Post -> date:date rationale:text
 - x User -> Devise
 - x AdminUser -> STI
-- Auditing
+- x Auditing
 
 ## Features
-- Approval Workflow
-- SMS Sending -> link to approval or overtime input -> Integrate with Heroku scheduler
+- x Approval Workflow
+- x SMS Sending -> link to approval or overtime input -> Integrate with Heroku scheduler
 - x Administrate admin dashboard
-- Email summary to managers for approval
-- Needs to be documented if employee did not log overtime
+- x Email summary to managers for approval
+- x Needs to be documented if employee did not log overtime
 - x Block non admin and guest users
-- Create audit log for each text message
-- Need to update end_date when confirmed
-- Need to oupdate audit log status when an overtime is rejected
-- Home icon
-- Update buttons on employee homepage so they show on mobile
-- Update buttons to include timespan
-- Update button sort order on employee homepage
-- Remove unnecessary buttons from admin nav bars
-- Fix admin dashboard bug
-- Implement Honeybadger for error reporting
-- Implement new relic for keeping the site alive
-- Check on data issue and verify correct hours are being tracked
+- x Create audit log for each text message
+- x Need to update end_date when confirmed
+- x Need to oupdate audit log status when an overtime is rejected
+- x Home icon
+- x Update buttons on employee homepage so they show on mobile
+- x Update buttons to include timespan
+- x Update button sort order on employee homepage
+- x Remove unnecessary buttons from admin nav bars
+- x Fix admin dashboard bug
+- x Implement Honeybadger for error reporting
+- x Implement new relic for keeping the site alive
+- x Check on data issue and verify correct hours are being tracked
 
 ## UI
 - x Bootstrap -> formatting
@@ -38,7 +38,7 @@
 - x Refactor posts_form for admin user with status
 - x Fix post_spec.rb:82 to use factories
 - x Fix post_spec.rb:52 to have correct user reference and not require update
-- Integrate validation for phone attribute in User:
+- x Integrate validation for phone attribute in User:
   - x No spaces of dashes
   - x Exactly 10 characters
   - x All characters must be numbers
