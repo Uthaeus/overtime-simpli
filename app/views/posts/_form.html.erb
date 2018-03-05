@@ -1,36 +1,67 @@
-<%= form_for @post, class: "form-horizontal" do |f| %>
+<div class='row'>
+  <div class='col-md-8'>
 
-  <% if @post.errors.any? %>
-    <% @post.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "Overtime App Notification", sticky: false, image: :notice) %>
+    <%= form_for @post, class: "form-horizontal" do |f| %>
+
+      <% if @post.errors.any? %>
+        <% @post.errors.full_messages.each do |error| %>
+          <%= js add_gritter(error, title: "Overtime App Notification", sticky: false, image: :notice) %>
+        <% end %>
+      <% end %>
+
+
+      <div class="form-group">
+        <%= f.label :title, class: "col-sm-2 control-label" %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :date, class: "col-sm-2 control-label", value: "Date Received" %>
+        <%= f.date_field :date, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :expiration, class: "col-sm-2 control-label", value: "Estimated Expiration" %>
+        <%= f.date_field :expiration, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        
+        <h4>Upload image here of vaccination records or other certification</h4>
+        <p>Note: There is no need to re-upload an image that already contains the necessary data. ie: A vaccination form displaying multiple vaccinations</p>
+
+
+        <label class="btn btn-primary">
+          Upload an image <%= f.file_field :image, style: 'display:none;' %>
+        </label>
+      </div>
+
+
+      <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
+
+      <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+
     <% end %>
-  <% end %>
-
-
-  <div class="form-group">
-    <%= f.label :title, class: "col-sm-2 control-label" %>
-    <%= f.text_field :title, class: "form-control" %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :date, class: "col-sm-2 control-label", value: "Date Received" %>
-    <%= f.date_field :date, class: "form-control" %>
+  <div class='col-md-4'>
+    <div class='container'>
+      <h3>Examples:</h3>
+      <ul>
+        <li>Tetanus Diptheria and Pertussis (Tdap)</li>
+        <li>Measles (Rubella)</li>
+        <li>Mumps</li>
+        <li>German Measles</li>
+        <li>PPD (TB) Skin Test</li>
+        <li>IGRA Tuberculosis Blood Test</li>
+        <li>Hepatitis B Series</li>
+        <li>Meningococcal (Meningitis)</li>
+        <li>Varicella (Chickenpox) Series</li>
+        <li>Varicella Titer</li>
+        <li>Rubella Titer</li>
+        <li>Flu Shot</li>
+        <li>Hepatitus C</li>
+        <li>CPR Certification</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="form-group">
-    <%= f.label :expiration, class: "col-sm-2 control-label", value: "Estimated Expiration" %>
-    <%= f.date_field :expiration, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <label class="btn btn-primary">
-      Upload an image <%= f.file_field :image, style: 'display:none;' %>
-    </label>
-  </div>
-
-
-  <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
-
-  <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
-
-<% end %>
+</div>
