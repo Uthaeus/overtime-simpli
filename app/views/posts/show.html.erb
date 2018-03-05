@@ -1,25 +1,26 @@
 
-<div>
-  <h2><%= @post.rationale %></h2>
+
+
+<div class='container'>
+  <div class='well'>
+
+    <div>
+      <h3><span>Client:</span> <%= @post.user.full_name %></h3>
+    </div>
+    <div>
+      <h3><span>Requisite:</span> <%= @post.title %></h3>
+    </div>
+    <div>
+      <h3><span>Date Received:</span> <%= @post.date %></h3>
+    </div>
+    <div>
+      <h3><span>Estimated Expiration:</span> <%= @post.expiration %></h3>
+    </div>
+
+    <div>
+      <h3><span>Current Stage of Approval:</span> <%= @post.status %></h3>
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if policy(@post).update? %>
 </div>
-
-
-<div class='well'>
-  <div>
-    <h3><span>Overtime Amount Requested:</span> <%= @post.overtime_request %></h3>
-  </div>
-
-  <div>
-    <h3><span>Employee:</span> <%= @post.user.full_name %></h3>
-  </div>
-
-  <div>
-    <h3><span>Date:</span> <%= @post.date %></h3>
-  </div>
-
-  <div>
-    <h3><span>Current Stage of Approval:</span> <%= @post.status %></h3>
-  </div>
-</div>
-
-<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if policy(@post).update? %>
