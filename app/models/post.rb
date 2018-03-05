@@ -9,6 +9,8 @@ class Post < ApplicationRecord
   after_save :confirm_audit_log, if: :submitted?
   after_save :un_confirm_audit_log, if: :rejected?
 
+  mount_uploader :image, PostUploader
+
 
   private
 

@@ -22,5 +22,13 @@
     </div>
   </div>
 
-  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if policy(@post).update? %>
+  <div class='row'>
+    <div class='col-md-3'>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if policy(@post).update? %>
+    </div>
+    <% if @post.image? %>
+      <div class='col-md-9'>
+        <%= image_tag @post.image, width: 600 %>
+      </div>
+    <% end %>
 </div>
