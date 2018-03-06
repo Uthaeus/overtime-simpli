@@ -63,5 +63,10 @@
         <li>CPR Certification</li>
       </ul>
     </div>
+    <% if @post.image? %>
+      <div class='side-img'>
+        <%= image_tag @post.image, width: "100%" %>
+      </div>
+    <% end %>
   </div>
 </div>
